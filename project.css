@@ -1,35 +1,83 @@
-.header{
-    text-align: left;
-    color:#1a4e86;
-    font-size: 50px;
-    font-family: Georgia, serif;
-    background-color:rgb(168, 231, 254);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 8px;
+    background-color: #1a1a1a;
+    font-family: Arial, sans-serif;
+    color: #1A365D;
+}
+
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    padding: 8px 28px 0;
 }
 
 .button a {
-    background-color:white;
-    color:#083f79;
-    padding: 10px 20px;
-    border-radius: 25px;
-    margin-right: 20px;
-    font-size: 18px;
-    float: right;
+    background-color: white;
+    color:  #1A365D;
+    padding: 8px 14px;
+    border-radius: 20px;
+    margin-right: 0;
+    font-size: 12px;
+    text-decoration: none;
+    float: none;
 }
+
+.button a:first-of-type {
+    background-color: #1A365D;
+    color: white;
+}
+
+.button a:hover {
+    background-color: #FFB800;
+    color: #1A365D;
+}
+
 .search-container {
     display: flex;
     justify-content: flex-end;
-    padding: 5px;
-    color: rgb(168, 231, 254) ;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 28px 0;
+    color: #1A365D;
 }
+
 .search-input {
-    padding: 5px;
-    border: 1px solid #1A365D;
-    border-radius: 6px;
+    padding: 6px 9px;
+    border: 1px solid #B7D9EB;
+    border-radius: 5px;
+    background-color: white;
     color: #1A365D;
+    font-size: 10px;
 }
-.slogan {
-    font-size: 20px;
-    color: #1A365D;
+
+.search-container button {
+    background-color: #1A365D;
+    color: white;
+    cursor: pointer;
+}
+
+.image {
+    float: left;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    background-color: white;
+    margin: 12px 12px 10px 28px;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.header {
     text-align: left;
     background-color: rgb(168, 231, 254);
     font-family: Garamond, serif;
@@ -37,7 +85,44 @@
 .des {
     font-size: 20px;
     color: #1A365D;
-    margin-right: 20px;
+    font-size: 30px;
+    font-family: Georgia, serif;
+    background-color: #A8E7FE;
+    margin: 24px 0 4px;
+    padding-top: 0;
+    background-color: transparent;
+}
+
+.slogan {
+    font-size: 12px;
+    font-style: italic;
+    color: #4776A5;
+    text-align: left;
+    background-color: #A8E7FE;
+    font-family: Garamond, serif;
+    margin: 0;
+    padding-bottom: 4px;
+    background-color: transparent;
+}
+
+h1.header,
+p.slogan {
+    margin-left: 0;
+}
+
+.hr {
+    border: 0;
+    border-top: 2px solid #1A365D;
+    margin: 12px 28px;
+    border-radius: 5px;
+    clear: both;
+}
+
+.des {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #1A365D;
+    margin: 0 28px;
     background-color: white;
     text-align: left;
     border: 20px rgb(168, 231, 254);
@@ -60,26 +145,115 @@
     display: flex;
     border: 20px solid #1A365D;
     background-color:#1A365D;
+    border: none; 
+    padding: 20px 20px;
+    border-radius: 10px;
 }
 
-.image{
-    float: left;
-    margin-right: 20px;
-    border-radius: 50px;
-    padding:30px
-}
-.p{
+.h2 {
+    color: #1A365D;
+    text-align: left;
+    background-color: transparent;
+    font-family: Georgia, serif;
     font-size: 18px;
-    color: #1A365D;
-    text-align: left;
-    background-color: rgb(168, 231, 254);
-    font-family: Garamond, serif;
+    margin: 0 0 10px;
 }
-.h2{
-    color: #1A365D;
+
+.p {
+    font-size: 12px;
+    line-height: 1.5;
     text-align: left;
-    background-color: rgb(168, 231, 254);
-    font-family:Georgia, serif;
+    background-color: transparent;
+    font-family: Garamond, serif;
+    margin: 0;
+}
+
+.join-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 9px 16px;
+    background-color: #FFB800;
+    color: #1A365D;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.join-button:hover {
+    background-color: #F5A900;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin: 12px 28px 24px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 9px;
+    padding: 15px 14px;
+    min-height: 85px;
+}
+
+.card h3 {
+    color: #3478D4;
+    font-size: 13px;
+    margin: 0 0 8px;
+}
+
+.card p {
+    color: #1A365D;
+    font-size: 11px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.footer a {
+    background-color: transparent;
+    color: white;
+    font-size: 11px;
+    border: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .button {
+        padding: 10px;
+        justify-content: center;
+    }
+    .search-container {
+        padding: 10px;
+    }
+    .image {
+        margin-left: 10px;
+    }
+    .header {
+        font-size: 23px;
+        margin-top: 22px;
+    }
+    .hr {
+        margin: 12px 10px;
+    }
+    .des {
+        margin: 0 10px;
+        padding: 16px;
+    }
+    .cards {
+        grid-template-columns: 1fr;
+        margin: 12px 10px 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
 }
 .main,body{
     background-color: rgb(168, 231, 254);
@@ -280,10 +454,7 @@ body{
     font-family: Georgia, serif;
     color: #1a4e86;
 }
-.main{
-    max-width: 900px;
-    margin: 30px auto;
-}
+
 .main > h1 {
     text-align: center;
     color: #264480;
@@ -333,4 +504,307 @@ aside {
 aside h3{
     color:#ffffff;
     padding: 10px;
+}
+
+
+#about-page {
+    background-color: #A8E7FE;
+    color: #1A365D;
+    font-family: Georgia, serif;
+}
+
+#about-page .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 14px 40px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#about-page .logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #10316B;
+}
+
+#about-page .link {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#about-page .nav-link {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 20px;
+    background-color: #E4F5FD;
+    color: #10316B;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+#about-page .nav-link:hover,
+#about-page .nav-link.active {
+    background-color: #1A365D;
+    color: white;
+}
+
+#about-page .about-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px 28px;
+}
+
+#about-page .about-heading {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+#about-page .about-heading h1 {
+    color: #1A365D;
+    font-family: Georgia, serif;
+    font-size: 34px;
+    margin: 0 0 12px;
+}
+
+#about-page .about-heading p {
+    color: #4776A5;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: auto;
+}
+
+#about-page .about-section {
+    background-color: white;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(29, 58, 95, 0.08);
+}
+
+#about-page .about-section h2 {
+    color: #3478D4;
+    font-size: 21px;
+    margin: 0 0 18px;
+    border-bottom: 2px solid #A8E7FE;
+    padding-bottom: 10px;
+}
+
+#about-page .about-section h3 {
+    color: #1A365D;
+    font-size: 17px;
+}
+
+#about-page .section-intro {
+    color: #4776A5;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+#about-page .group-list {
+    line-height: 2;
+    padding-left: 25px;
+}
+
+#about-page .group-list ul {
+    padding-left: 25px;
+}
+
+#about-page .member-list {
+    margin: 0;
+}
+
+#about-page .member {
+    background-color: #F2FAFF;
+    padding: 18px 22px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #3478D4;
+}
+
+#about-page .member dt {
+    color: #1A365D;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+#about-page .member dd {
+    margin-left: 0;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+#about-page .member-id {
+    display: inline-block;
+    background-color: #1A365D;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#about-page .member p {
+    margin: 12px 0;
+}
+
+#about-page .group-photo {
+    max-width: 650px;
+    margin: 25px auto 5px;
+    padding: 12px;
+    background-color: #F2FAFF;
+    border: 3px solid #3478D4;
+    border-radius: 12px;
+    text-align: center;
+}
+
+#about-page .group-photo img {
+    display: block;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+#about-page .group-photo figcaption {
+    color: #4776A5;
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 12px;
+    line-height: 1.5;
+}
+
+#about-page .table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+#about-page .fun-facts {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+    background-color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+}
+
+#about-page .fun-facts caption {
+    color: #1A365D;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px;
+    caption-side: top;
+}
+
+#about-page .fun-facts th {
+    background-color: #1A365D;
+    color: white;
+    padding: 13px 10px;
+    text-align: left;
+    border: 1px solid #B7D9EB;
+}
+
+#about-page .fun-facts td {
+    padding: 12px 10px;
+    border: 1px solid #B7D9EB;
+    color: #1A365D;
+    font-size: 13px;
+}
+
+#about-page .fun-facts tbody tr:nth-child(even) {
+    background-color: #E4F5FD;
+}
+
+#about-page .fun-facts tbody tr:hover {
+    background-color: #FFB800;
+    transition: background-color 0.2s;
+}
+
+#about-page .acknowledgement {
+    background-color: #1A365D;
+    color: white;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    line-height: 1.7;
+}
+
+#about-page .acknowledgement h2 {
+    color: #FFB800;
+    font-size: 20px;
+}
+
+#about-page .site-footer {
+    padding: 30px 40px;
+    background-color: #1D3A5F;
+    color: #D7E8F5;
+    text-align: center;
+}
+
+#about-page .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+}
+
+#about-page .footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+#about-page .footer-links a:hover {
+    color: #FFB800;
+}
+
+#about-page .copyright {
+    border-top: 1px solid rgba(255,255,255,0.25);
+    padding-top: 15px;
+    font-size: 12px;
+}
+
+@media (max-width: 640px) {
+
+    #about-page .navbar {
+        justify-content: center;
+        padding: 15px;
+    }
+
+    #about-page .link {
+        justify-content: center;
+    }
+
+    #about-page .about-main {
+        padding: 15px 10px;
+    }
+
+    #about-page .about-heading h1 {
+        font-size: 27px;
+    }
+
+    #about-page .about-section {
+        padding: 20px 15px;
+    }
+
+    #about-page .group-photo {
+        padding: 8px;
+    }
+
+    #about-page .fun-facts {
+        min-width: 550px;
+    }
+
+    #about-page .footer-links {
+        gap: 15px;
+    }
 }
