@@ -9,6 +9,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Apply for a job at LearnBridge Technologies.">
   <title>Apply | LearnBridge Technologies</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -19,17 +20,17 @@
       <a href="index.html" class="button">Home Page</a>
       <a href="about.html" class="button">About Us</a>
       <a href="jobs.html" class="button">Job Description</a>
-      <a href="apply.html" class="button">Apply</a>
+      <a href="apply.html" class="button" aria-current="page">Apply</a>
     </nav>
   </header>
 
-  <main>
+  <main class="main">
     <h1 class="page-title">Job Application</h1>
     <p class="page-note">All fields are required except “Other skills”.</p>
 
     <form class="apply-form" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
 
-      <div class="field">
+      <div class="field full">
         <label for="ref">Job reference number</label>
         <input type="text" id="ref" name="ref" pattern="[A-Za-z0-9]{5}" maxlength="5" title="Exactly 5 letters or numbers" required>
       </div>
@@ -59,7 +60,7 @@
         <label for="other">Other</label>
       </fieldset>
 
-      <div class="field">
+      <div class="field full">
         <label for="street">Street address</label>
         <input type="text" id="street" name="street" maxlength="40" required>
       </div>
@@ -94,12 +95,12 @@
         <input type="email" id="email" name="email" required>
       </div>
 
-      <div class="field">
+      <div class="field full">
         <label for="phone">Phone number</label>
         <input type="tel" id="phone" name="phone" pattern="[0-9]{8,12}" title="8 to 12 digits" required>
       </div>
 
-      <fieldset class="field">
+      <fieldset class="field full">
         <legend>Skills</legend>
         <input type="checkbox" id="html" name="skills[]" value="html">
         <label for="html">HTML</label>
@@ -111,7 +112,7 @@
         <label for="access">Accessibility</label>
       </fieldset>
 
-      <div class="field">
+      <div class="field full">
         <label for="other-skills">Other skills</label>
         <textarea id="other-skills" name="other_skills" rows="4"></textarea>
       </div>
@@ -121,12 +122,18 @@
   </main>
 
   <footer class="site-footer">
+    <p>LearnBridge Technologies – Learning for everyone, everywhere</p>
     <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="apply.html">Apply</a></li>
       <li><a href="https://swinburnestudent.atlassian.net/jira/software/projects/WWTP/boards/2">Jira project</a></li>
       <li><a href="https://github.com/DaoTuanNam29/Learnbridge-website">GitHub repository</a></li>
       <li><a href="https://daotuannam29.github.io/Learnbridge-website/">Live site</a></li>
       <li><a href="mailto:info@learnbridge.com">info@learnbridge.com</a></li>
     </ul>
+    <p class="copyright">&copy; 2026 LearnBridge Technologies</p>
   </footer>
 </body>
 </html>
