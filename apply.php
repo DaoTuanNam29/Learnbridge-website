@@ -1,34 +1,21 @@
-<!DOCTYPE html>
-<!--
-  apply.html - Job application form
+<?php
+/*
+  apply.php - Job application form
   Author: Dao Tuan Nam
   Acknowledgements: W3Schools (HTML forms, input pattern); Claude (Anthropic) used
   for reviewing and suggestions, which I checked and adapted myself.
--->
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Apply for a job at LearnBridge Technologies.">
-  <title>Apply | LearnBridge Technologies</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header class="navbar">
-    <a class="logo" href="index.html">LearnBridge Technologies</a>
-    <nav class="link" aria-label="Main navigation">
-      <a href="index.html" class="button">Home Page</a>
-      <a href="about.html" class="button">About Us</a>
-      <a href="jobs.html" class="button">Job Description</a>
-      <a href="apply.html" class="button" aria-current="page">Apply</a>
-    </nav>
-  </header>
+*/
+$title = "Apply";
+$description = "Apply for a job at LearnBridge Technologies.";
+$active = "apply.php";
+include 'includes/header.inc';
+?>
 
   <main class="main">
     <h1 class="page-title">Job Application</h1>
     <p class="page-note">All fields are required except “Other skills”.</p>
 
-    <form class="apply-form" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+    <form class="apply-form" action="process_eoi.php" method="post">
 
       <div class="field full">
         <label for="ref">Job reference number</label>
@@ -121,19 +108,4 @@
     </form>
   </main>
 
-  <footer class="site-footer">
-    <p>LearnBridge Technologies – Learning for everyone, everywhere</p>
-    <ul class="footer-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="jobs.html">Jobs</a></li>
-      <li><a href="apply.html">Apply</a></li>
-      <li><a href="https://swinburnestudent.atlassian.net/jira/software/projects/WWTP/boards/2">Jira project</a></li>
-      <li><a href="https://github.com/DaoTuanNam29/Learnbridge-website">GitHub repository</a></li>
-      <li><a href="https://daotuannam29.github.io/Learnbridge-website/">Live site</a></li>
-      <li><a href="mailto:info@learnbridge.com">info@learnbridge.com</a></li>
-    </ul>
-    <p class="copyright">&copy; 2026 LearnBridge Technologies</p>
-  </footer>
-</body>
-</html>
+  <?php include 'includes/footer.inc'; ?>
