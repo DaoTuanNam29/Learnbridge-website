@@ -16,5 +16,5 @@ CREATE TABLE IF NOT EXISTS eoi (
   Phone         VARCHAR(12)  NOT NULL,
   Skills        VARCHAR(255) NOT NULL DEFAULT '',
   OtherSkills   TEXT,
-  Status        VARCHAR(10)  NOT NULL DEFAULT 'New'
+  Status        ENUM('New','Current','Final') NOT NULL DEFAULT 'New'
 );

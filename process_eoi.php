@@ -128,7 +128,7 @@ if (empty($errors)) {
             Phone         VARCHAR(12)  NOT NULL,
             Skills        VARCHAR(255) NOT NULL DEFAULT '',
             OtherSkills   TEXT,
-            Status        VARCHAR(10)  NOT NULL DEFAULT 'New'
+            Status        ENUM('New','Current','Final') NOT NULL DEFAULT 'New'
         )";
         mysqli_query($conn, $createSql);
         $sql = "INSERT INTO eoi (JobRef, FirstName, LastName, DOB, Gender, StreetAddress,

@@ -15,7 +15,7 @@ include 'includes/header.inc';
     <h1 class="page-title">Job Application</h1>
     <p class="page-note">All fields are required except “Other skills”.</p>
 
-    <form class="apply-form" action="process_eoi.php" method="post">
+    <form class="apply-form" action="process_eoi.php" method="post" novalidate>
 
       <div class="field full">
         <label for="ref">Job reference number</label>
