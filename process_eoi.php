@@ -154,7 +154,7 @@ if (empty($errors)) {
 $title = "Application Result";
 $description = "Result of your job application.";
 $active = "apply.php";
-include "includes/header.inc";
+include "header.inc";
 ?>
 
   <main class="main">
@@ -174,4 +174,4 @@ include "includes/header.inc";
     <?php endif; ?>
   </main>
 
-<?php include "includes/footer.inc"; ?>
+<?php include "footer.inc"; ?>

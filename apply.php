@@ -8,7 +8,7 @@
 $title = "Apply";
 $description = "Apply for a job at LearnBridge Technologies.";
 $active = "apply.php";
-include 'includes/header.inc';
+include 'header.inc';
 ?>
 
   <main class="main">
@@ -108,4 +108,4 @@ include 'includes/header.inc';
     </form>
   </main>
 
-  <?php include 'includes/footer.inc'; ?>
+  <?php include 'footer.inc'; ?>
