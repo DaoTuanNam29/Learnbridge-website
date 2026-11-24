@@ -112,6 +112,25 @@ if (empty($errors)) {
         $errors[] = "Cannot connect to the database. Please try again later.";
     } else {
         // Prepared statement: dấu ? là chỗ điền dữ liệu, chống SQL injection
+                // Tự tạo bảng eoi nếu chưa có
+        $createSql = "CREATE TABLE IF NOT EXISTS eoi (
+            EOInumber     INT AUTO_INCREMENT PRIMARY KEY,
+            JobRef        VARCHAR(5)   NOT NULL,
+            FirstName     VARCHAR(20)  NOT NULL,
+            LastName      VARCHAR(20)  NOT NULL,
+            DOB           DATE         NOT NULL,
+            Gender        VARCHAR(10)  NOT NULL,
+            StreetAddress VARCHAR(40)  NOT NULL,
+            Suburb        VARCHAR(40)  NOT NULL,
+            State         VARCHAR(3)   NOT NULL,
+            Postcode      CHAR(4)      NOT NULL,
+            Email         VARCHAR(100) NOT NULL,
+            Phone         VARCHAR(12)  NOT NULL,
+            Skills        VARCHAR(255) NOT NULL DEFAULT '',
+            OtherSkills   TEXT,
+            Status        VARCHAR(10)  NOT NULL DEFAULT 'New'
+        )";
+        mysqli_query($conn, $createSql);
         $sql = "INSERT INTO eoi (JobRef, FirstName, LastName, DOB, Gender, StreetAddress,
                                  Suburb, State, Postcode, Email, Phone, Skills, OtherSkills)
                 VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
