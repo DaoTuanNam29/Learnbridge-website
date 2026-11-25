@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="<?php echo $description; ?>">
   <title><?php echo $title; ?> | LearnBridge Technologies</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
   <header class="navbar">
